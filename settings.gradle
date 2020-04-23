@@ -1,0 +1,2 @@
+rootProject.name='InstaRecipe'
+include ':app'
