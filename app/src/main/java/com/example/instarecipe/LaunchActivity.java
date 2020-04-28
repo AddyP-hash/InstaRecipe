@@ -14,26 +14,29 @@ public class LaunchActivity extends AppCompatActivity {
         setContentView(R.layout.launch);
         final Button save = findViewById(R.id.savedButton);
         final Button search = findViewById(R.id.searchButton);
-        save.setVisibility(View.VISIBLE);
-        search.setVisibility(View.VISIBLE);
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                save.setVisibility(View.GONE);
-                search.setVisibility(View.GONE);
+                setContentView(R.layout.saved);
+                final Button savedBack = findViewById(R.id.savedBack);
+                savedBack.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
             }
         });
         search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                save.setVisibility(View.GONE);
-                search.setVisibility(View.GONE);
+                setContentView(R.layout.search);
+                final Button searchBack = findViewById(R.id.searchBack);
+                searchBack.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
             }
         });
-        search.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                save.setVisibility(View.VISIBLE);
-                search.setVisibility(View.VISIBLE);
-            }
-        });
+
     }
 
 }

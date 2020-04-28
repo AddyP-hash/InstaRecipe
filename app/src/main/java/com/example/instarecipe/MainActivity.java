@@ -22,6 +22,7 @@ public final class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         Intent intent = getIntent();
         String value = intent.getStringExtra("key");
         super.onCreate(savedInstanceState);
@@ -54,5 +55,10 @@ public final class MainActivity extends AppCompatActivity {
 
     private String createPackageContext(MainActivity mainActivity) {
         return null;
+        //View chunk;
+        //chunk = getLayoutInflater().inflate();
+
+        //Button save = chunk.findViewById(R.id.savedRecipes);
+        // Button newRecipe = chunk.findViewById(R.id.newRecipes);
     }
 }
