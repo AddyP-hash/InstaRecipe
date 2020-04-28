@@ -59,6 +59,6 @@ public final class MainActivity extends AppCompatActivity {
         //chunk = getLayoutInflater().inflate();
 
         //Button save = chunk.findViewById(R.id.savedRecipes);
-        // Button newRecipe = chunk.findViewById(R.id.newRecipes);
+        //Button newRecipe = chunk.findViewById(R.id.newRecipes);
     }
 }
