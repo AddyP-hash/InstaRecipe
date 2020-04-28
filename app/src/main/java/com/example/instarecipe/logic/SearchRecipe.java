@@ -1,5 +1,6 @@
 package com.example.instarecipe.logic;
 
+import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.view.Menu;
@@ -29,7 +30,7 @@ public class SearchRecipe {
         public String searchByTitle() {
                 return null;
         }
-        @Override
+        //@Override
         public boolean onCreateOptionsMenu(Menu menu, MenuInflater inflater) throws IllegalArgumentException {
                 inflater.inflate(R.menu.options_menu, menu);
                 // Associate searchable configuration with the SearchView
@@ -38,7 +39,7 @@ public class SearchRecipe {
                 SearchView searchView =
                         (SearchView) menu.findItem(R.id.app_bar_search).getActionView(); //might need to edit
                 searchView.setSearchableInfo(
-                        searchManager.getSearchableInfo(getComponentName()));
+                        searchManager.getSearchableInfo(((Activity) mContext).getComponentName()));
 
                 return true;
         }

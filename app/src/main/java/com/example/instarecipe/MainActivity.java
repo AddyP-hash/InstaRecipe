@@ -29,6 +29,12 @@ public final class MainActivity extends AppCompatActivity {
     }
 
     private void setUpUi() {
+        findViewById(R.id.app_bar_search).setVisibility(View.VISIBLE);
+        findViewById(R.id.searchButton).setVisibility(View.VISIBLE);
+        findViewById(R.id.savedRecipes).setVisibility(View.VISIBLE);
+        findViewById(R.id.newRecipes).setVisibility(View.VISIBLE);
+
+
         View chunk;
         chunk = getLayoutInflater().inflate(R.layout.activity_main);
 
