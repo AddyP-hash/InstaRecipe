@@ -37,13 +37,13 @@ public final class MainActivity extends AppCompatActivity {
 
 
         View chunk;
-        chunk = getLayoutInflater().inflate(R.layout.activity_main);
+       chunk = getLayoutInflater().inflate(R.layout.activity_main);
 
-        Button save = chunk.findViewById(R.id.savedRecipes);
+       Button save = chunk.findViewById(R.id.savedRecipes);
         Button newRecipe = chunk.findViewById(R.id.newRecipes);
         final Intent myIntent = new Intent(MainActivity.this, NewOrder.class);
         save.setOnClickListener((View v) -> {
-            myIntent.putExtra("game" ......)
+           myIntent.putExtra("game" ......)
             startActivity(myIntent);
         });
         newRecipe.setOnClickListener((View v) -> {

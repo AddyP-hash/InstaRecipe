@@ -10,7 +10,7 @@
         android:id="@+id/savedButton"
         android:layout_width="427dp"
         android:layout_height="388dp"
-        android:text="Saved Recipes"
+        android:text="Recommended Recipes"
         app:layout_constraintBottom_toTopOf="@+id/searchButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

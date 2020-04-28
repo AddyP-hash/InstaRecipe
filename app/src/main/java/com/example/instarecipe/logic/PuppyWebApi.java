@@ -58,7 +58,7 @@ public final class PuppyWebApi {
                 try {
                     JsonObject err = JsonParser.parseString(data).getAsJsonObject();
                     Log.v(TAG, "Application error from " + url);
-                    errorListener.onErrorResponse(new VolleyError(err.get("err").getAsString());
+                    //errorListener.onErrorResponse(new VolleyError(err.get("err").getAsString());
                 } catch (Exception err) {
                     Log.e(TAG, "400 error by " + url);
                     errorListener.onErrorResponse(error);
