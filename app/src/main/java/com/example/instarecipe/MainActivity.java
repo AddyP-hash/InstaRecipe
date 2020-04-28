@@ -8,9 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 
 
 
@@ -18,6 +15,7 @@ public final class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         Intent intent = getIntent();
         String value = intent.getStringExtra("key");
         super.onCreate(savedInstanceState);
@@ -25,10 +23,10 @@ public final class MainActivity extends AppCompatActivity {
     }
 
     private void setUpUi() {
-        View chunk;
-        chunk = getLayoutInflater().inflate()
+        //View chunk;
+        //chunk = getLayoutInflater().inflate();
 
-        Button save = chunk.findViewById(R.id.savedRecipes);
-        Button newRecipe = chunk.findViewById(R.id.newRecipes);
+        //Button save = chunk.findViewById(R.id.savedRecipes);
+       // Button newRecipe = chunk.findViewById(R.id.newRecipes);
     }
 }
