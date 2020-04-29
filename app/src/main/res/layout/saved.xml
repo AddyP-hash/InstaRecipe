@@ -7,6 +7,19 @@
     android:background="#00BCD4">
 
     <Button
+        android:id="@+id/savedBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="#2196F3"
+        android:text="Exit"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/webView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/cake"
         android:layout_width="178dp"
         android:layout_height="117dp"
@@ -25,21 +38,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/savedBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="307dp"
-        android:layout_marginBottom="112dp"
-        android:background="#2196F3"
-        android:text="Exit"
-        app:layout_constraintBottom_toTopOf="@+id/brownies"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/salmon"
         android:layout_width="178dp"
         android:layout_height="117dp"
@@ -54,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tunaMelt"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.61" />
 
     <Button
         android:id="@+id/beefTenderloin"
@@ -108,7 +106,6 @@
         android:layout_height="117dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="184dp"
-        android:layout_marginEnd="217dp"
         android:layout_marginBottom="430dp"
         android:background="#2196F3"
         android:text="Brownies"
@@ -117,7 +114,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.52" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
@@ -173,6 +170,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="395dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

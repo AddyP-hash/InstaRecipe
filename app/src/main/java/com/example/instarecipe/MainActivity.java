@@ -16,7 +16,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-/*
+
 
 public final class MainActivity extends AppCompatActivity {
 
@@ -55,11 +55,9 @@ public final class MainActivity extends AppCompatActivity {
 
     private String createPackageContext(MainActivity mainActivity) {
         return null;
-        //View chunk;
-        //chunk = getLayoutInflater().inflate();
+        View chunk;
+        chunk = getLayoutInflater().inflate();
 
-        //Button save = chunk.findViewById(R.id.savedRecipes);
-        //Button newRecipe = chunk.findViewById(R.id.newRecipes);
+        Button save = chunk.findViewById(R.id.savedRecipes);
+        Button newRecipe = chunk.findViewById(R.id.newRecipes);
     }
-}
-**/
