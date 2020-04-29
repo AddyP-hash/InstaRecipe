@@ -24,9 +24,9 @@
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="533dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="129dp"
         android:autoText="false"
         android:background="#2196F3"
         android:text="Chocolate Truffle Cake"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/salmon"
-        app:layout_constraintTop_toBottomOf="@+id/beefTenderloin"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -42,40 +42,43 @@
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="533dp"
         android:layout_marginEnd="217dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="129dp"
         android:background="#2196F3"
         android:text="Salmon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tunaMelt"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/beefTenderloin"
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="371dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="291dp"
         android:background="#2196F3"
         android:text="Beef Tenderloin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tunaMelt"
-        app:layout_constraintTop_toBottomOf="@+id/grilledCheese" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/tunaMelt"
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="371dp"
         android:layout_marginEnd="217dp"
+        android:layout_marginBottom="291dp"
         android:background="#2196F3"
         android:text="Spicy Tuna Melt"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,22 +86,24 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.532" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/grilledCheese"
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="210dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="430dp"
+        android:layout_marginBottom="453dp"
         android:background="#2196F3"
         android:text="Grilled Ham and Cheese"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/brownies"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/brownies"
@@ -174,6 +179,12 @@
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="left" />
