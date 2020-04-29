@@ -16,7 +16,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-
+/*
 
 public final class MainActivity extends AppCompatActivity {
 
@@ -62,3 +62,4 @@ public final class MainActivity extends AppCompatActivity {
         //Button newRecipe = chunk.findViewById(R.id.newRecipes);
     }
 }
+**/
