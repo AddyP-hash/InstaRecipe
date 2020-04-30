@@ -24,9 +24,7 @@
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="533dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="129dp"
         android:autoText="false"
         android:background="#2196F3"
         android:text="Chocolate Truffle Cake"
@@ -35,16 +33,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/salmon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.835" />
 
     <Button
         android:id="@+id/salmon"
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="533dp"
         android:layout_marginEnd="217dp"
-        android:layout_marginBottom="129dp"
         android:background="#2196F3"
         android:text="Salmon"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,33 +48,29 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.835" />
 
     <Button
         android:id="@+id/beefTenderloin"
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="371dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="291dp"
         android:background="#2196F3"
         android:text="Beef Tenderloin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/tunaMelt"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.568" />
 
     <Button
         android:id="@+id/tunaMelt"
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="371dp"
         android:layout_marginEnd="217dp"
-        android:layout_marginBottom="291dp"
         android:background="#2196F3"
         android:text="Spicy Tuna Melt"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,40 +78,34 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.568" />
 
     <Button
         android:id="@+id/grilledCheese"
         android:layout_width="178dp"
         android:layout_height="117dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="453dp"
+        android:layout_marginEnd="15dp"
         android:background="#2196F3"
         android:text="Grilled Ham and Cheese"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/brownies"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.299" />
 
     <Button
         android:id="@+id/brownies"
         android:layout_width="178dp"
         android:layout_height="117dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginBottom="430dp"
         android:background="#2196F3"
         android:text="Brownies"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.299" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
@@ -188,5 +174,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="left" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Recommended Recipes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
