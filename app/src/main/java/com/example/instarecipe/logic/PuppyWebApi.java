@@ -1,26 +1,32 @@
 package com.example.instarecipe.logic;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 
-public final class PuppyWebApi {
+public final class PuppyWebApi extends Activity implements Runnable {
 
     private static final String TAG = "RecipePuppy";
-    private static final String API = "http://www.recipepuppy.com/api/";
+    public static final String API = "http://www.recipepuppy.com/api/";
     private static final int BAD_REQUEST = 400;
     private static RequestQueue requestQueue;
     private static StringRequest stringRequest;
+    public static final long errorNum = 999999999;
 
     public void setStringRequest() {
         stringRequest.setTag(TAG);
@@ -30,10 +36,21 @@ public final class PuppyWebApi {
     }
 
     private PuppyWebApi() {  }
+    public void run() { };
+
+    @Override
+    protected void onStop() {
+            super.onStop();
+            if (requestQueue != null) {
+                requestQueue.cancelAll(TAG);
+                System.out.print(errorNum);
+            }
+            Thread.currentThread().getUncaughtExceptionHandler().toString();
+    }
 
     public static void startRequest(Context context, String url,
                                     Response .Listener<JsonObject> listener, Response.ErrorListener errorListener) {
-        startRequest(context, url, listener, errorListener);
+        startRequest(context, url, Request.Method.GET, null, listener, errorListener);
     }
 
     public static void startRequest(Context c, String url, int method, JsonElement body,
@@ -68,5 +85,20 @@ public final class PuppyWebApi {
                 errorListener.onErrorResponse(error);
             }
         };
+    }
+    /**
+     * Might delete this method I don't know yet.
+     * Testing out native JSON parser.
+     */
+    private static void parseInfo() {
+        try {
+            String response = null;
+            JSONObject object = (JSONObject) new JSONTokener(response).nextValue();
+            String requestID = object.getString("requestId");
+            int likelihood = object.getInt("likelihood");
+            JSONArray photos = object.getJSONArray("photos");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }
