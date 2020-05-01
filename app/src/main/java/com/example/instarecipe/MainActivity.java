@@ -5,11 +5,8 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -35,7 +32,7 @@ public final class MainActivity extends AppCompatActivity {
         findViewById(R.id.searchButton).setVisibility(View.VISIBLE);
         findViewById(R.id.savedRecipes).setVisibility(View.VISIBLE);
         findViewById(R.id.newRecipes).setVisibility(View.VISIBLE);
-        PuppyWebApi.startRequest(this, PuppyWebApi.API + "/recipes", response -> {
+        PuppyWebApi.startRequest(this, PuppyWebApi.API + "/results", response -> {
             setUpUi(response);
         }, error ->  {
             Toast.makeText(this, "Unable to reach server!", Toast.LENGTH_SHORT).show();
@@ -48,29 +45,42 @@ public final class MainActivity extends AppCompatActivity {
         for (JsonElement j: recipes) {
             JsonObject recipe = j.getAsJsonObject();
 
-        DatabaseInfo data = new DatabaseInfo();
+        DatabaseInfo data = new DatabaseInfo(recipe);
         String title = data.getTitle();
         String url = data.getURL();
         String ing = data.getIngredients();
         String thumbnail = data.getThumbnail();
 
-        View chunk;
-        chunk = getLayoutInflater().inflate(R.layout.activity_main);
+        Button save = findViewById(R.id.savedButton);
+        Button newRecipe = findViewById(R.id.searchButton);
+        Button saved = findViewById(R.id.savedBack);
+        Button search = findViewById(R.id.searchBack);
 
-        Button save = chunk.findViewById(R.id.savedRecipes);
-        Button newRecipe = chunk.findViewById(R.id.newRecipes);
-        final Intent myIntent = new Intent(MainActivity.this, NewOrder.class);
-        save.setOnClickListener((View v) -> {
-            myIntent.putExtra("game" ......)
+        Intent myIntent = new Intent(this, DatabaseInfo.class);
+        search.setOnClickListener((View v) -> {
             startActivity(myIntent);
+            getIntent();
+            finish();
+        });
+        saved.setOnClickListener((View v) -> {
+        startActivity(myIntent);
+        getIntent();
+        finish();
+        });
+        save.setOnClickListener((View v) -> {
+            myIntent.putExtra(title, ing);
+            startActivity(myIntent);
+            finish();
         });
         newRecipe.setOnClickListener((View v) -> {
-
+            PuppyWebApi.startRequest(getApplicationContext(), PuppyWebApi.API + "/Recipe/" + title + "/Ingredients/" + ing + "/Webpage/" + url, Request.Method.GET, null, response -> {
+                connect();
+                }, error -> {
+                Toast.makeText(this, error.getMessage(), Toast.LENGTH_LONG).show(); });
         });
-        myIntent.putExtra("key", value);  //need to fix this
-        startActivity(myIntent);
-    }
-
+        //myIntent.putExtra("key", value);  //need to fix this
+            //startActivity(myIntent);
+/**
     private String createPackageContext(MainActivity mainActivity){
             return null;
             View chunk;
@@ -78,6 +88,7 @@ public final class MainActivity extends AppCompatActivity {
 
             Button save = chunk.findViewById(R.id.savedRecipes);
             Button newRecipe = chunk.findViewById(R.id.newRecipes);
+ */
         }
     }
 }
