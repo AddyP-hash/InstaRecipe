@@ -1,5 +1,6 @@
 package com.example.instarecipe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -151,6 +152,8 @@ public class LaunchActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setContentView(R.layout.search);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
                 final Button searchBack = findViewById(R.id.searchBack);
                 searchBack.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {

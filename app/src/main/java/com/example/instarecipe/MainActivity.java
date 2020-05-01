@@ -24,7 +24,7 @@ public final class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String value = intent.getStringExtra("key");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.search);
     }
 
     private void connect() {

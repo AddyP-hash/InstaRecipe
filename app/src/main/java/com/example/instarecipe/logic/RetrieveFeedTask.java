@@ -11,7 +11,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+/*
 public class RetrieveFeedTask extends AsyncTask<Void, Void, String>  {
 
     private Exception exception;
@@ -21,15 +21,15 @@ public class RetrieveFeedTask extends AsyncTask<Void, Void, String>  {
 
     protected void onPreExecute() {
         progressBar.setVisibility(View.VISIBLE);
-        responseView.setText("");
+        //responseView.setText("");
     }
 
     protected String doInBackground(Void... urls) {
-        String email = emailText.getText().toString();
+        //String email = emailText.getText().toString();
         // Do some validation here
 
         try {
-            URL url = new URL(API_URL + "email=" + email + "&apiKey=" + API_KEY);
+            //URL url = new URL(API_URL + "email=" + email + "&apiKey=" + API_KEY);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -60,3 +60,4 @@ public class RetrieveFeedTask extends AsyncTask<Void, Void, String>  {
         responseView.setText(response);
     }
 }
+*/
