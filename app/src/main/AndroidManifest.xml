@@ -3,6 +3,7 @@
     package="com.example.instarecipe">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:usesCleartextTraffic="true"
         android:debuggable="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

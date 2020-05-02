@@ -50,11 +50,13 @@ public final class PuppyWebApi extends Activity implements Runnable {
 
     public static void startRequest(Context context, String url,
                                     Response .Listener<JsonObject> listener, Response.ErrorListener errorListener) {
+        System.out.println("request function");
         startRequest(context, url, Request.Method.GET, null, listener, errorListener);
     }
 
     public static void startRequest(Context c, String url, int method, JsonElement body,
                                     final Response.Listener<JsonObject> listener, Response.ErrorListener errorListener) throws IllegalArgumentException {
+        System.out.println("request function");
         if (requestQueue == null) {
             Log.v(TAG, "Request Created");
             requestQueue = Volley.newRequestQueue(c.getApplicationContext());
@@ -85,6 +87,8 @@ public final class PuppyWebApi extends Activity implements Runnable {
                 errorListener.onErrorResponse(error);
             }
         };
+        StringRequest request = new StringRequest(Request.Method.GET, url, serverRL, serverEL);
+        requestQueue.add(request);
     }
     /**
      * Might delete this method I don't know yet.
