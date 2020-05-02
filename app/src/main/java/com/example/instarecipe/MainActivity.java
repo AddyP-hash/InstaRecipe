@@ -12,14 +12,10 @@ import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
 import com.example.instarecipe.logic.DatabaseInfo;
 import com.example.instarecipe.logic.PuppyWebApi;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 public final class MainActivity extends AppCompatActivity {
 
@@ -28,7 +24,6 @@ public final class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
-        String value = intent.getStringExtra("key");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search);
         Button exit = findViewById(R.id.searchBack);
