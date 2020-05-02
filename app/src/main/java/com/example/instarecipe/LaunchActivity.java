@@ -151,7 +151,6 @@ public class LaunchActivity extends AppCompatActivity {
         });
         search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.search);
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 final Button searchBack = findViewById(R.id.searchBack);
