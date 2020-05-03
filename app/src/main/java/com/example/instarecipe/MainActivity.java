@@ -18,9 +18,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 public final class MainActivity extends AppCompatActivity {
-
-    DatabaseInfo recentData;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
