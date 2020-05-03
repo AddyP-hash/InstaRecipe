@@ -23,7 +23,6 @@ public final class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Intent intent = getIntent();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search);
         Button exit = findViewById(R.id.searchBack);
@@ -46,7 +45,8 @@ public final class MainActivity extends AppCompatActivity {
                 final Button savedBack = findViewById(R.id.savedBack);
                 savedBack.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
-                        finish();
+                        Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                        startActivity(intent);
                     }
                 });
             }, error -> {
@@ -55,7 +55,8 @@ public final class MainActivity extends AppCompatActivity {
         });
         exit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                startActivity(intent);
             }
         });
     }

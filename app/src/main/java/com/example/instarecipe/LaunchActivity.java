@@ -40,7 +40,8 @@ public class LaunchActivity extends AppCompatActivity {
                         final Button savedBack = findViewById(R.id.savedBack);
                         savedBack.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                                startActivity(intent);
                             }
                         });
                     }
@@ -59,7 +60,8 @@ public class LaunchActivity extends AppCompatActivity {
                         final Button savedBack = findViewById(R.id.savedBack);
                         savedBack.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                                startActivity(intent);
                             }
                         });
                     }
@@ -78,7 +80,8 @@ public class LaunchActivity extends AppCompatActivity {
                         final Button savedBack = findViewById(R.id.savedBack);
                         savedBack.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                                startActivity(intent);
                             }
                         });
                     }
@@ -97,7 +100,8 @@ public class LaunchActivity extends AppCompatActivity {
                         final Button savedBack = findViewById(R.id.savedBack);
                         savedBack.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                                startActivity(intent);
                             }
                         });
                     }
@@ -116,7 +120,8 @@ public class LaunchActivity extends AppCompatActivity {
                         final Button savedBack = findViewById(R.id.savedBack);
                         savedBack.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                                startActivity(intent);
                             }
                         });
                     }
@@ -135,7 +140,8 @@ public class LaunchActivity extends AppCompatActivity {
                         final Button savedBack = findViewById(R.id.savedBack);
                         savedBack.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                                startActivity(intent);
                             }
                         });
                     }
@@ -144,7 +150,8 @@ public class LaunchActivity extends AppCompatActivity {
                 final Button savedBack = findViewById(R.id.savedBack);
                 savedBack.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
-                        finish();
+                        Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                        startActivity(intent);
                     }
                 });
             }
@@ -156,7 +163,8 @@ public class LaunchActivity extends AppCompatActivity {
                 final Button searchBack = findViewById(R.id.searchBack);
                 searchBack.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
-                        finish();
+                        Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
+                        startActivity(intent);
                     }
                 });
             }
